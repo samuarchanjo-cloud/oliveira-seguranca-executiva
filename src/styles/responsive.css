@@ -256,7 +256,7 @@
 
   /* SOBRE: mantém profissional visível, mas puxa o texto para a esquerda */
   .about__bg {
-    background-position: 64% center !important;
+    background-position: 72% center !important;
     background-size: cover !important;
   }
 
@@ -273,13 +273,13 @@
   .about__inner {
     justify-content: flex-start !important;
     align-items: center !important;
-    padding-left: 20px !important;
+    padding-left: 0 !important;
     padding-right: 20px !important;
   }
 
   .about__content {
     width: 100% !important;
-    max-width: min(50%, 285px) !important;
+    max-width: min(44%, 255px) !important;
     margin-left: 0 !important;
     margin-right: auto !important;
     text-align: left !important;
@@ -292,22 +292,22 @@
   }
 
   .about .section-title--left {
-    font-size: clamp(1.8rem, 8vw, 2.65rem) !important;
+    font-size: clamp(1.65rem, 7.4vw, 2.35rem) !important;
     line-height: 1.05 !important;
   }
 
   .about__text {
-    max-width: 280px !important;
-    font-size: 0.92rem !important;
-    line-height: 1.58 !important;
+    max-width: 250px !important;
+    font-size: 0.86rem !important;
+    line-height: 1.52 !important;
   }
 
   .about__list {
-    max-width: 280px !important;
+    max-width: 250px !important;
   }
 
   .about__list li {
-    font-size: 0.9rem !important;
-    line-height: 1.3 !important;
+    font-size: 0.84rem !important;
+    line-height: 1.25 !important;
   }
 }
