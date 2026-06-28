@@ -154,3 +154,58 @@
   color: var(--color-gold);
   flex-shrink: 0;
 }
+
+/* AJUSTE MOBILE HERO - evita texto em cima do rosto */
+@media (max-width: 768px) {
+  .hero__bg {
+    background-position: 88% center;
+  }
+
+  .hero__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.98) 0%,
+      rgba(0, 0, 0, 0.94) 42%,
+      rgba(0, 0, 0, 0.76) 68%,
+      rgba(0, 0, 0, 0.42) 100%
+    );
+  }
+
+  .hero__inner {
+    align-items: center;
+    padding-top: 96px;
+    padding-bottom: 70px;
+  }
+
+  .hero__content {
+    max-width: 82%;
+    text-align: left;
+  }
+
+  .hero__badge {
+    justify-content: flex-start;
+    width: fit-content;
+  }
+
+  .hero__title,
+  .hero__subtitle,
+  .hero__text {
+    text-align: left;
+  }
+
+  .hero__title {
+    font-size: clamp(3.2rem, 14vw, 4.8rem);
+    line-height: 0.96;
+  }
+
+  .hero__subtitle {
+    font-size: 1.35rem;
+    line-height: 1.25;
+  }
+
+  .hero__text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 330px;
+  }
+}
