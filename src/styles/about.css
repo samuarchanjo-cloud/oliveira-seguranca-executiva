@@ -155,3 +155,58 @@
 .about__card {
   display: none !important;
 }
+
+@media (max-width: 768px) {
+  .about__stats,
+  .about__statsBar,
+  .about__stats-bar,
+  .stats-grid {
+    display: none !important;
+  }
+
+  .about {
+    min-height: auto;
+    padding-bottom: 90px;
+  }
+
+  .about__inner {
+    min-height: auto;
+    padding-top: 96px;
+    padding-bottom: 40px;
+    align-items: flex-start;
+  }
+
+  .about__content {
+    max-width: 100%;
+  }
+
+  .about .section-eyebrow {
+    text-align: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.28em;
+    margin-bottom: 18px;
+  }
+
+  .about .section-title-left {
+    text-align: center;
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+    line-height: 1.05;
+    margin-bottom: 28px;
+  }
+
+  .about__text {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .about__list {
+    gap: 18px;
+    margin-top: 34px;
+  }
+
+  .about__list li {
+    font-size: 1.05rem;
+    line-height: 1.35;
+    align-items: flex-start;
+  }
+}
