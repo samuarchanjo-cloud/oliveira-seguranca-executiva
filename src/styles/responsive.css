@@ -153,39 +153,68 @@
 }
 
 @media (max-width: 768px) {
-  .hero__bg {
+  .about__bg {
     background-position: 68% center !important;
     background-size: cover !important;
   }
 
-  .about__bg {
-    background-position: 66% center !important;
-    background-size: cover !important;
-  }
-
-  .hero__overlay,
   .about__overlay {
     background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.99) 0%,
-      rgba(0, 0, 0, 0.96) 38%,
-      rgba(0, 0, 0, 0.82) 65%,
-      rgba(0, 0, 0, 0.55) 100%
+      rgba(0, 0, 0, 0.96) 48%,
+      rgba(0, 0, 0, 0.78) 72%,
+      rgba(0, 0, 0, 0.52) 100%
     ) !important;
   }
 
-  .hero__content,
+  .about__inner {
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding-top: 82px !important;
+    padding-bottom: 58px !important;
+  }
+
   .about__content {
-    max-width: 78% !important;
+    width: 100% !important;
+    max-width: 72% !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
     text-align: left !important;
   }
 
-  .hero__title,
-  .hero__subtitle,
-  .hero__text,
   .about .section-eyebrow,
   .about .section-title-left,
   .about__text {
     text-align: left !important;
+  }
+
+  .about .section-eyebrow {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.24em !important;
+    margin-bottom: 16px !important;
+  }
+
+  .about .section-title-left {
+    font-size: clamp(2rem, 9vw, 3.1rem) !important;
+    line-height: 1.05 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .about__text {
+    font-size: 0.98rem !important;
+    line-height: 1.65 !important;
+    max-width: 310px !important;
+  }
+
+  .about__list {
+    max-width: 310px !important;
+    gap: 14px !important;
+    margin-top: 28px !important;
+  }
+
+  .about__list li {
+    font-size: 0.95rem !important;
+    line-height: 1.32 !important;
   }
 }
