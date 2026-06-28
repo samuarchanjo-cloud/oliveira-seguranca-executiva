@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Phone, Menu, X } from 'lucide-react'
-import { company, navLinks, whatsappLink } from '../data/siteData.js'
+import { company, navLinks, openWhatsAppBusiness, whatsappBusinessLink } from '../data/siteData.js'
 import '../styles/header.css'
 
 function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const whatsappMessage = `Olá, ${company.name}. Gostaria de solicitar uma avaliação de segurança.`
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -46,9 +47,11 @@ function Header() {
         <div className="header__actions">
           <a
             className="header__phone"
-            href={whatsappLink(`Olá, ${company.name}. Gostaria de solicitar uma avaliação de segurança.`)}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={whatsappBusinessLink(whatsappMessage)}
+            onClick={(e) => {
+              e.preventDefault()
+              openWhatsAppBusiness(whatsappMessage)
+            }}
           >
             <Phone size={16} />
             <span>

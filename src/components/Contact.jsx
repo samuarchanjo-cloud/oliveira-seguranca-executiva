@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Phone, Mail, ShieldCheck, Send } from 'lucide-react'
-import { company, whatsappLink } from '../data/siteData.js'
+import { company, openWhatsAppBusiness } from '../data/siteData.js'
 import '../styles/contact.css'
 
 function Contact() {
@@ -23,7 +23,7 @@ function Contact() {
       `Mensagem: ${form.message || '-'}`,
     ]
 
-    window.open(whatsappLink(lines.join('\n')), '_blank', 'noopener,noreferrer')
+    openWhatsAppBusiness(lines.join('\n'))
   }
 
   return (

@@ -15,9 +15,28 @@ export const company = {
 }
 
 export function whatsappLink(message) {
-  const base = `https://wa.me/${company.whatsappNumber}`
+  const base = `https://api.whatsapp.com/send?phone=${company.whatsappNumber}`
   if (!message) return base
-  return `${base}?text=${encodeURIComponent(message)}`
+  return `${base}&text=${encodeURIComponent(message)}`
+}
+
+export function whatsappBusinessLink(message) {
+  const base = `whatsapp-business://send?phone=${company.whatsappNumber}`
+  if (!message) return base
+  return `${base}&text=${encodeURIComponent(message)}`
+}
+
+export function openWhatsAppBusiness(message) {
+  const fallbackUrl = whatsappLink(message)
+  const businessUrl = whatsappBusinessLink(message)
+
+  window.location.href = businessUrl
+
+  window.setTimeout(() => {
+    if (document.visibilityState === 'visible') {
+      window.location.href = fallbackUrl
+    }
+  }, 1200)
 }
 
 export const navLinks = [

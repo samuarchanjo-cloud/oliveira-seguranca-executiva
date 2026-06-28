@@ -1,11 +1,13 @@
 import { ShieldCheck, Plane, Clock, Lock, ArrowRight } from 'lucide-react'
-import { company, quickHighlights, whatsappLink } from '../data/siteData.js'
+import { company, openWhatsAppBusiness, quickHighlights, whatsappBusinessLink } from '../data/siteData.js'
 import heroImage from '../assets/hero-fullscreen.png'
 import '../styles/hero.css'
 
 const icons = { ShieldCheck, Plane, Clock, Lock }
 
 function Hero() {
+  const whatsappMessage = `Olá, ${company.name}. Gostaria de solicitar uma avaliação de segurança.`
+
   return (
     <section
       id="inicio"
@@ -39,11 +41,11 @@ function Hero() {
 
           <a
             className="btn btn--gold hero__cta"
-            href={whatsappLink(
-              `Olá, ${company.name}. Gostaria de solicitar uma avaliação de segurança.`
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={whatsappBusinessLink(whatsappMessage)}
+            onClick={(e) => {
+              e.preventDefault()
+              openWhatsAppBusiness(whatsappMessage)
+            }}
           >
             Fale com Oliveira
             <ArrowRight size={18} />

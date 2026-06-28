@@ -1,13 +1,17 @@
 import { MessageCircle } from 'lucide-react'
-import { company, whatsappLink } from '../data/siteData.js'
+import { company, openWhatsAppBusiness, whatsappBusinessLink } from '../data/siteData.js'
 
 function WhatsAppButton() {
+  const whatsappMessage = `Olá, ${company.name}. Gostaria de solicitar uma avaliação de segurança.`
+
   return (
     <a
       className="whatsapp-fab"
-      href={whatsappLink(`Olá, ${company.name}. Gostaria de solicitar uma avaliação de segurança.`)}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={whatsappBusinessLink(whatsappMessage)}
+      onClick={(e) => {
+        e.preventDefault()
+        openWhatsAppBusiness(whatsappMessage)
+      }}
       aria-label="Falar no WhatsApp"
     >
       <MessageCircle size={26} />
