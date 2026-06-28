@@ -2,11 +2,19 @@ import { CheckCircle2 } from 'lucide-react'
 import StatCard from './StatCard.jsx'
 import { differentials, stats } from '../data/siteData.js'
 import '../styles/about.css'
+import aboutImage from '../assets/about-fullscreen.png'
 
 function About() {
   return (
-    <section id="sobre" className="about">
-      <div className="container about__inner">
+    <section
+  id="sobre"
+  className="about"
+  style={{ '--about-image': `url(${aboutImage})` }}
+>
+  <div className="about__bg" aria-hidden="true" />
+  <div className="about__overlay" aria-hidden="true" />
+
+  <div className="container about__inner">
         <div className="about__content">
           <p className="section-eyebrow">Sobre Oliveira</p>
           <h2 className="section-title section-title--left">

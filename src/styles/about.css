@@ -93,3 +93,65 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+
+/* ABOUT FULLSCREEN BACKGROUND */
+.about {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #050505;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--about-image);
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.about__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.92) 18%,
+    rgba(0, 0, 0, 0.72) 42%,
+    rgba(0, 0, 0, 0.38) 65%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+  z-index: 2;
+}
+
+.about__inner,
+.about__stats {
+  position: relative;
+  z-index: 3;
+}
+
+.about__inner {
+  width: 100%;
+  min-height: calc(100vh - 170px);
+  display: flex;
+  align-items: center;
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
+
+.about__content {
+  max-width: 590px;
+}
+
+.about__visual,
+.about__image,
+.about__photo,
+.about__imageCard,
+.about__card {
+  display: none !important;
+}
