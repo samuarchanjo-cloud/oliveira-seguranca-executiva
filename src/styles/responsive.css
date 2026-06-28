@@ -218,3 +218,96 @@
     line-height: 1.32 !important;
   }
 }
+
+/* AJUSTE FINAL MOBILE - HERO E SOBRE SEPARADOS */
+@media (max-width: 768px) {
+  /* HERO: joga o profissional mais para a direita e deixa texto legível */
+  .hero__bg {
+    background-position: 42% center !important;
+    background-size: cover !important;
+  }
+
+  .hero__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.99) 0%,
+      rgba(0, 0, 0, 0.96) 42%,
+      rgba(0, 0, 0, 0.80) 68%,
+      rgba(0, 0, 0, 0.52) 100%
+    ) !important;
+  }
+
+  .hero__content {
+    max-width: 72% !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+  }
+
+  .hero__title,
+  .hero__subtitle,
+  .hero__text {
+    text-align: left !important;
+  }
+
+  .hero__text {
+    max-width: 320px !important;
+  }
+
+  /* SOBRE: mantém profissional visível, mas puxa o texto para a esquerda */
+  .about__bg {
+    background-position: 72% center !important;
+    background-size: cover !important;
+  }
+
+  .about__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.99) 0%,
+      rgba(0, 0, 0, 0.96) 44%,
+      rgba(0, 0, 0, 0.78) 72%,
+      rgba(0, 0, 0, 0.50) 100%
+    ) !important;
+  }
+
+  .about__inner {
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .about__content {
+    width: 100% !important;
+    max-width: 66% !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    text-align: left !important;
+  }
+
+  .about .section-eyebrow,
+  .about .section-title-left,
+  .about__text {
+    text-align: left !important;
+  }
+
+  .about .section-title-left {
+    font-size: clamp(2rem, 9vw, 3.1rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  .about__text {
+    max-width: 300px !important;
+    font-size: 0.98rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .about__list {
+    max-width: 300px !important;
+  }
+
+  .about__list li {
+    font-size: 0.95rem !important;
+    line-height: 1.35 !important;
+  }
+}
