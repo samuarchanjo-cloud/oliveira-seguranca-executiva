@@ -152,15 +152,14 @@
   }
 }
 
-/* AJUSTE FINAL DE ENQUADRAMENTO MOBILE DAS IMAGENS FULLSCREEN */
 @media (max-width: 768px) {
   .hero__bg {
-    background-position: 100% center !important;
+    background-position: 68% center !important;
     background-size: cover !important;
   }
 
   .about__bg {
-    background-position: 100% center !important;
+    background-position: 66% center !important;
     background-size: cover !important;
   }
 
