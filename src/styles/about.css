@@ -1,0 +1,95 @@
+.about {
+  padding: 120px 0 80px;
+  background: var(--color-black);
+}
+
+.about__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 72px;
+}
+
+.about__text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-muted);
+  margin: 0 0 28px;
+  max-width: 520px;
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about__list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--color-white);
+}
+
+.about__list svg {
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.about__media {
+  display: flex;
+  justify-content: center;
+}
+
+.about__mediaFrame {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.about__mediaPlaceholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(200deg, #1c1c1c 0%, #0c0c0c 55%, #050505 100%);
+  /* SUBSTITUA por background-image com a segunda foto, ou reaproveite oliveira-hero.png */
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 48px;
+  border-top: 1px solid var(--color-border);
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-gold);
+}
+
+.stat-card__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card__text strong {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--color-white);
+  letter-spacing: 0.5px;
+}
+
+.stat-card__text span {
+  font-size: 12px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
