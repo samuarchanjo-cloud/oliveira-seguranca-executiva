@@ -151,3 +151,42 @@
     font-size: 11px;
   }
 }
+
+/* AJUSTE FINAL DE ENQUADRAMENTO MOBILE DAS IMAGENS FULLSCREEN */
+@media (max-width: 768px) {
+  .hero__bg {
+    background-position: 100% center !important;
+    background-size: cover !important;
+  }
+
+  .about__bg {
+    background-position: 100% center !important;
+    background-size: cover !important;
+  }
+
+  .hero__overlay,
+  .about__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.99) 0%,
+      rgba(0, 0, 0, 0.96) 38%,
+      rgba(0, 0, 0, 0.82) 65%,
+      rgba(0, 0, 0, 0.55) 100%
+    ) !important;
+  }
+
+  .hero__content,
+  .about__content {
+    max-width: 78% !important;
+    text-align: left !important;
+  }
+
+  .hero__title,
+  .hero__subtitle,
+  .hero__text,
+  .about .section-eyebrow,
+  .about .section-title-left,
+  .about__text {
+    text-align: left !important;
+  }
+}
